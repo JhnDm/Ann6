@@ -119,8 +119,24 @@
     font-size: 1.2rem;
     margin-bottom: 30px;
 }
-
 .spotify, .youtube {
     margin-top: 30px;
 }
+.quiz-container {
+    margin-top: 50px; /* Add space between navbar and quiz */
+}
 
+#question {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#options button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+#next-btn {
+    display: none; /* Hide Next button until an answer is clicked */
+}
