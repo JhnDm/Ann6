@@ -1,0 +1,9 @@
+.header {
+    background-image: url('your-image-url.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 0; /* Adjust padding as needed */
+}
+   
