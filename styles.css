@@ -8,7 +8,7 @@ body, html {
   
   /* Hero Section */
   .hero {
-    background-image: url('your-background.jpg'); /* Replace with your actual image */
+    background-image: url('./img/'); /* Replace with your actual image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
