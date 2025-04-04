@@ -8,7 +8,7 @@ body, html {
   
   /* Hero Section */
   .hero {
-    background-image: url('./img/'); /* Replace with your actual image */
+    background-image: url('./img/2024.jpg'); /* Replace with your actual image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -68,30 +68,18 @@ body, html {
     width: 60%;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
-.gallery {
-    padding: 50px 0;
-}
-
-.gallery h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.gallery p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
 .gallery-img {
     width: 100%;
-    height: auto;
+    height: 300px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Crop the image nicely */
     border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease-in-out;
 }
 
 .gallery-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
 /* Tabs Styling */
