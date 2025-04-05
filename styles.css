@@ -4,10 +4,10 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'Source Sans Pro', sans-serif;
-  }
-  
-  /* Hero Section */
-  .hero {
+}
+
+/* Hero Section */
+.hero {
     background-image: url('./img/bg.jpg'); /* Replace with your actual image */
     background-size: cover;
     background-position: center;
@@ -17,10 +17,10 @@ body, html {
     align-items: center;
     position: relative;
     color: white;
-  }
-  
-  /* Optional overlay for readability */
-  .hero-overlay {
+}
+
+/* Optional overlay for readability */
+.hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -28,39 +28,40 @@ body, html {
     height: 100%;
     background: rgba(0, 0, 0, 0.4); /* slightly darkens image */
     z-index: 1;
-  }
-  
-  .hero-content {
+}
+
+.hero-content {
     position: relative;
     z-index: 2;
     max-width: 500px;
     text-align: left;
     margin-left: 5%;
-  }
-  
-  .hero-content h1 {
+}
+
+.hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-  }
-  
-  .hero-content p {
+}
+
+.hero-content p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
-  }
-  
-  .hero-content .btn {
+}
+
+.hero-content .btn {
     font-size: 1rem;
     padding: 0.5rem 1.5rem;
     background-color: #fff;
     color: #000;
     border: none;
     transition: background 0.3s;
-  }
-  
-  .hero-content .btn:hover {
+}
+
+.hero-content .btn:hover {
     background-color: #ffd6e8;
     color: #000;
-  }
+}
+
 .timeline-item {
     background: #f8f9fa;
     padding: 20px;
@@ -68,6 +69,7 @@ body, html {
     width: 60%;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
+
 .gallery-img {
     width: 100%;
     height: 300px; /* Set a fixed height for uniformity */
@@ -94,6 +96,7 @@ body, html {
     background: #ff6b81;
     color: white;
 }
+
 .playlist {
     padding: 50px 0;
 }
@@ -107,11 +110,17 @@ body, html {
     font-size: 1.2rem;
     margin-bottom: 30px;
 }
+
 .spotify, .youtube {
     margin-top: 30px;
 }
+
 .quiz-container {
     margin-top: 50px; /* Add space between navbar and quiz */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #question {
@@ -128,6 +137,7 @@ body, html {
 #next-btn {
     display: none; /* Hide Next button until an answer is clicked */
 }
+
 .love-container {
     margin-top: 50px;
     text-align: center;
@@ -146,4 +156,35 @@ body, html {
 
 .hidden {
     display: block !important;
+}
+
+/* Puzzle Section */
+#puzzle-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 4px;
+    margin-top: 2rem;
+    justify-items: center; /* Center the tiles */
+    align-items: center;  /* Center the tiles */
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    background-image: url('./img/1.jpg'); /* replace with your image */
+    background-size: 300px 300px;
+    border: 1px solid #ccc;
+    cursor: grab;
+}
+
+.tile.dragging {
+    opacity: 0.5;
+}
+
+#success {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: green;
+    display: none;
 }
