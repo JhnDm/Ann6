@@ -154,7 +154,7 @@ body, html {
 .tile {
     width: 100px;
     height: 100px;
-    background-image: url('./img/puzzle.jpg'); /* Replace with your image */
+    background-image: url('./img/puzzle.jpg'); 
     background-size: 300px 300px;
     border: 1px solid #ccc;
     cursor: grab;
@@ -167,7 +167,7 @@ body, html {
 #success {
     margin-top: 2rem;
     font-size: 1.5rem;
-    color: green;
+    color: blue;
     display: none;
 }
 /* General Reset */
