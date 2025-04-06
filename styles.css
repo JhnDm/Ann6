@@ -97,6 +97,11 @@ body, html {
     background: blue;
     color: white;
 }
+/* Make active navbar items bold */
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+}
+
 
 .playlist {
     padding: 50px 0;
