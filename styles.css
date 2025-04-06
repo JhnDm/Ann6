@@ -94,7 +94,7 @@ body, html {
 }
 
 .nav-pills .nav-link.active {
-    background: #ff6b81;
+    background: blue;
     color: white;
 }
 
@@ -170,63 +170,73 @@ body, html {
     color: green;
     display: none;
 }
-#letter-container {
-    background-color: burlywood; /* Vintage parchment color */
-    color: black; /* Black font */
-    font-family: 'Courier New', Courier, monospace; /* Typewriter font */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
-    white-space: pre-line;
-    display: none;
-    overflow: hidden;
-    position: relative;
-    animation: rollIn 2s forwards;
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
-#letter-container.hidden {
+/* Letter Section */
+.love-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.letter-paper {
     display: none;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f2e0bb; /* Vintage Paper Color */
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(0);
+    animation: rollPaper 1s forwards;
+}
+
+.letter-paper.visible {
+    display: block;
+    transform: scale(1);
+}
+
+@keyframes rollPaper {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.letter-content {
+    font-size: 1.2rem;
+    color: black;
+    font-family: 'Courier New', Courier, monospace; /* Typewriter font */
+}
+
+.left-part {
+    text-align: left;
+    font-weight: bold;
+}
+
+.justified-text {
+    text-align: justify;
+    font-style: italic;
 }
 
 #letter {
-    font-size: 1rem;
-    font-style: italic;
-    line-height: 1.6;
+    padding: 20px;
 }
 
-#letter-container.visible {
+#letter.visible {
     display: block;
 }
 
-/* Rolling Paper Animation */
-@keyframes rollIn {
-    0% {
-        transform: scaleY(0);
-        transform-origin: top;
-    }
-    100% {
-        transform: scaleY(1);
-    }
-}
-
-/* Button Styling */
-.btn-primary {
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    background-color: blue;
-    border: none;
-    color: white;
-    border-radius: 30px;
-    transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #d63384;
-}
-
-/* Add a smooth transition for showing/hiding the letter */
-#letter-container {
-    transition: all 0.5s ease;
+#letter.visible .letter-paper {
+    animation: rollPaper 1s forwards;
 }

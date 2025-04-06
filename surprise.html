@@ -34,28 +34,26 @@
 
     <!-- Letter Section -->
     <section class="love-container">
-        <div class="container text-center">
+        <div class="container">
             <h1>A Letter for You</h1>
-            <button class="btn btn-primary mt-3" onclick="toggleLetter()">Read the Letter</button> <br><br>
-            <div id="letter-container" class="letter-paper">
-                <p id="letter">
-                    My love, <br><br>
-                    From the very first day, you’ve filled my life with joy, laughter, and endless warmth. <br>
-                    Each moment with you feels like magic, and I’m so grateful for every second we share. <br>
-                    No matter the distance, my heart is always with you. <br><br>
-                    Here’s to more memories, more smiles, and a forever with you. <br><br>
-                    I love you, always. ❤️
-                </p>
+            <button class="btn btn-primary mt-3" onclick="showLetter()">Read the Letter</button> <br><br>
+            <div id="letter" class="letter-paper">
+                <div class="letter-content">
+                    <p class="left-part">My love,</p>
+                    <p class="justified-text">We’ve finally reached another year together, despite everything we encountered last year, and yet we remain strong. I’m extremely grateful that you’re the one I’ve chosen to be with and to create wonderful memories with, day by day. Although I’m not perfect, I’m doing my best to show you that I’m sincere, and I’ll keep proving it every day. I apologize if this is all I can offer for now, but I promise I’ll make it up to you someday. I’ll ask you out for spontaneous dates whenever you want. <br><br>
+                    Cheers to our sixth years, Palangga! <br><br>
+                    I love you, always. ❤️</p>
+                </div>
             </div>
         </div>
     </section>
 
     <script>
-        function toggleLetter() {
-            const letterContainer = document.getElementById('letter-container');
-            letterContainer.classList.toggle('visible');
-            letterContainer.classList.toggle('hidden');
+        function showLetter() {
+            const letter = document.getElementById('letter');
+            letter.classList.toggle('visible');
         }
     </script>
+
 </body>
 </html>
