@@ -32,12 +32,30 @@
         </div>
     </nav>
 
-    <div class="container text-center love-container">
-        <h1>A Special Letter for You</h1>
-        <button id="open-btn" class="btn btn-danger mt-3">Open</button>
-        <p id="letter" class="hidden"></p>
-    </div>
+    <!-- Letter Section -->
+    <section class="love-container">
+        <div class="container text-center">
+            <h1>A Letter for You</h1>
+            <button class="btn btn-primary mt-3" onclick="toggleLetter()">Read the Letter</button> <br><br>
+            <div id="letter-container" class="letter-paper">
+                <p id="letter">
+                    My love, <br><br>
+                    From the very first day, you’ve filled my life with joy, laughter, and endless warmth. <br>
+                    Each moment with you feels like magic, and I’m so grateful for every second we share. <br>
+                    No matter the distance, my heart is always with you. <br><br>
+                    Here’s to more memories, more smiles, and a forever with you. <br><br>
+                    I love you, always. ❤️
+                </p>
+            </div>
+        </div>
+    </section>
 
-    <script src="surprise.js"></script>
+    <script>
+        function toggleLetter() {
+            const letterContainer = document.getElementById('letter-container');
+            letterContainer.classList.toggle('visible');
+            letterContainer.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
